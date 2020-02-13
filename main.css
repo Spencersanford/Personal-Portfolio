@@ -9,9 +9,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size:2rem;
-    font-weight: 400;
+    font-family: 'poppins', sans-serif;
+    font-size:1.5rem;
+    color: white;
 }
 #navbar{
     display:flex;
@@ -33,6 +33,7 @@ ul{
 }
 #welcome-section{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -40,9 +41,28 @@ ul{
     background-color: black;
 
 }
+#hi{
+    margin: 1rem;
+    font-size: 22px;
+    color: white;
+    
+}
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+#projects{
+    padding: 2.5em;
+}
 #project-list{
     display: flex;
     justify-content:space-evenly;
+    
+}
+#projects h1{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
     
 }
 figure{
@@ -65,12 +85,27 @@ img {
 h1{
     color: white;
 }
+
 #contact{
     display: flex;
-    justify-content: space-evenly;
-    margin: 6rem;
+    flex-direction: column;
+    padding: 5rem;
     flex-wrap: wrap;
+    background-color: darkblue;
+    text-align: center;
+    
 }
+#contact-links{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: darkblue; 
+    flex-direction: row;
+}
+#contact p{
+    padding-bottom:2rem;
+}
+
 
 footer{
     height: 6rem;
@@ -82,6 +117,8 @@ footer{
 }
 a{
     text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    color: white;
 }
 
 @media screen and (width: 600px) {
