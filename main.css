@@ -30,6 +30,7 @@ body{
 }
 .nav-list a:hover {
     background: var(--main-yellow);
+    color: white;
   }
 ul{
     list-style: none;
