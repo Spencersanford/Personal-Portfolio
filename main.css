@@ -4,6 +4,8 @@
 }
 :root{
     --main-white: #fff;
+    --main-green: #7FB069;
+    --main-yellow: #FBB04C;
 }
 html{
     scroll-behavior: smooth;
@@ -17,14 +19,14 @@ body{
     display:flex;
     justify-content: flex-end;
     position: fixed;
-    background-color:maroon;
+    background-color:var(--main-white);
     width: 100%;
 }
 .nav-list a{
     display:block;
     padding: 1em;
     text-decoration: none;
-    color:antiquewhite;
+    color:#333;
 }
 ul{
     list-style: none;
@@ -38,7 +40,7 @@ ul{
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color:var(--main-green);
 
 }
 #hi{
@@ -58,26 +60,29 @@ h1{
     display: flex;
     justify-content:space-evenly;
     
+    
 }
 #projects h1{
     color: black;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 2.5rem;
     
 }
 figure{
     display: flex;
     flex-direction: column;
-    border: 0.5rem outset pink;
     width: 18rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
     
 }
 figcaption {
-    background-color: #222;
-    color: #fff;
+    background-color: white;
+    color: #333;
     text-align: center;
     font-size: 1.5rem;
-    padding-bottom:0px;
+    padding-bottom:1rem;
 }
 img {
     max-width: 100%;
@@ -91,7 +96,7 @@ h1{
     flex-direction: column;
     padding: 5rem;
     flex-wrap: wrap;
-    background-color: darkblue;
+    background-color:var(--main-yellow);
     text-align: center;
     
 }
@@ -99,7 +104,6 @@ h1{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: darkblue; 
     flex-direction: row;
 }
 #contact p{
@@ -109,7 +113,7 @@ h1{
 
 footer{
     height: 6rem;
-    background-color: darkcyan;
+    background-color: #E69E3D;
     color: white;
     display: flex;
     justify-content: center;
