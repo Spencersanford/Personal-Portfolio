@@ -27,6 +27,10 @@ people.forEach(person => {
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
     greetingDiv.appendChild(imageItem)
+
+    imageItem.addEventListener('error', (event) => {
+        imageItem.hidden = true
+    })
     
     // add some way to handle user cliks on the image
     imageItem.addEventListener("click", () => {
