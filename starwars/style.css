@@ -1,22 +1,22 @@
-:root{
-    box-sizing: border-box;
+:root {
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #dfdfdf;
+  background-color: #dfdfdf;
 }
 
 a > img {
-    height: 18rem;
-    margin: 4px;
+  height: 18rem;
+  margin: 4px;
 }
 
 button {
-    font-size: 1.5rem;
-    background-color: teal;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    font-family: poppins;
-    padding: 8px;
+  font-size: 1.5rem;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-family: poppins;
+  padding: 8px;
 }
