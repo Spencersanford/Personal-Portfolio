@@ -1,6 +1,4 @@
-import { films } from "../data/films.js";
 import { people } from "../data/people.js";
-import { starships } from "../data/starships.js";
 
 const gallery = document.querySelector(".gallery");
 
@@ -10,9 +8,7 @@ const femaleButton = document.querySelector("#femaleButton");
 
 const maleCharacters = people.filter(person => person.gender === "male");
 
-
 const femaleCharacters = people.filter(person => person.gender === "female");
-
 
 const otherCharacters = people.filter(person => {
   if (
@@ -27,17 +23,17 @@ const otherCharacters = people.filter(person => {
 console.log(otherCharacters.length);
 
 maleButton.addEventListener("click", event => {
-    console.log("Clicked on male button");
-    populateDOM(maleCharacters);
-  });
-  femaleButton.addEventListener("click", event => {
-      console.log("Female Button");
-      populateDOM(femaleCharacters);
-    });
-    otherButton.addEventListener("click", event => {
-      console.log("Clicked on male button");
-      populateDOM(otherCharacters);
-    });
+  console.log("Clicked on male button");
+  populateDOM(maleCharacters);
+});
+femaleButton.addEventListener("click", event => {
+  console.log("Female Button");
+  populateDOM(femaleCharacters);
+});
+otherButton.addEventListener("click", event => {
+  console.log("Clicked on male button");
+  populateDOM(otherCharacters);
+});
 
 const castList = document.createElement("ul");
 
@@ -47,26 +43,25 @@ const listItem1 = document.createElement("li");
 function getCharNumber(url) {
   let end = url.lastIndexOf("/");
   let start = end - 2;
-  if(url.charAt(start) === '/') {
-      start++
+  if (url.charAt(start) === "/") {
+    start++;
   }
-  return url.slice(start,end)
+  return url.slice(start, end);
 }
 
 //getCharNumber("https://swapi.co/api/people/10/");
 
-function removeChildren (element) {
+function removeChildren(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
 }
 
-
 function populateDOM(characters) {
-  removeChildren (gallery)
+  removeChildren(gallery);
   characters.forEach(person => {
     // need to extract charachter from URL
-    let charNum = getCharNumber(person.url)
+    let charNum = getCharNumber(person.url);
     let anchorWrap = document.createElement("a");
     anchorWrap.href = "#";
 
