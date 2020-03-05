@@ -2,7 +2,7 @@ import { films } from "../data/films.js";
 import { people } from "../data/people.js";
 import { starships } from "../data/starships.js";
 
-const greetingDiv = document.querySelector(".greeting");
+const gallery = document.querySelector(".gallery");
 
 const maleButton = document.querySelector("#maleButton");
 const otherButton = document.querySelector("#otherButton");
@@ -55,7 +55,15 @@ function getCharNumber(url) {
 
 //getCharNumber("https://swapi.co/api/people/10/");
 
+function removeChildren (element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
+
 function populateDOM(characters) {
+  removeChildren (gallery)
   characters.forEach(person => {
     // need to extract charachter from URL
     let charNum = getCharNumber(person.url)
@@ -64,7 +72,7 @@ function populateDOM(characters) {
 
     let imageItem = document.createElement("img");
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`;
-    greetingDiv.appendChild(imageItem);
+    gallery.appendChild(imageItem);
 
     imageItem.addEventListener("error", event => {
       imageItem.hidden = true;
@@ -77,8 +85,8 @@ function populateDOM(characters) {
     });
 
     anchorWrap.appendChild(imageItem);
-    greetingDiv.appendChild(anchorWrap);
+    gallery.appendChild(anchorWrap);
   });
 }
 
-greetingDiv.appendChild(castList);
+gallery.appendChild(castList);
