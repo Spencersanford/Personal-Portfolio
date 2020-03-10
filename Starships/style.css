@@ -11,10 +11,23 @@ li {
     list-style-type: none;
 }
 
+header, footer {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 .container{
     display: flex;
 }
 .nav {
     border: solid 2px;
     padding-right: 1rem;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+
 }
