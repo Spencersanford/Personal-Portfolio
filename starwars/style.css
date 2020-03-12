@@ -15,8 +15,30 @@ button {
   font-size: 1.5rem;
   background-color: teal;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   font-family: poppins;
-  padding: 8px;
+  padding: 10px;
+  margin-right: 1rem;
+}
+h1{
+  font-family: poppins;
+  font-weight: 600;
+  text-align: center;
+  font-size: 3rem;
+}
+header{
+  display: flex;
+  justify-content: center;
+
+}
+.gallery{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+img{
+  border-radius: 10px;
 }
