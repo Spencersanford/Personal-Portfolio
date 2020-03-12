@@ -1,5 +1,5 @@
 import { starships } from "../data/starships.js";
-import { getLastNumber, removeChildren } from "/utils.js"; 
+import { getLastNumber, removeChildren} from "/utils.js"; 
 
 
 const nav = document.querySelector ('.nav')
@@ -13,7 +13,8 @@ const closeButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
 
 closeButton.addEventListener ('click', () => {
-  dialog.classList.toggle ('is-Active')
+  dialog.classList.toggle ('is-active')
+  console.log ("working")
 })
 
 modalBackground.addEventListener ('click', () => {
@@ -54,6 +55,7 @@ function populateNav(starships) {
     //imageItem.src = '../Images/Uvu.png'
     shipImage.hidden = true
     dialog.classList.toggle('is-active')
+    console.log("didn't load")
   });
   shipView.appendChild(shipImage);
   }
