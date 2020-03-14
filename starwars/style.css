@@ -1,9 +1,14 @@
 :root {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  background-color: #dfdfdf;
+  background-color: white;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 a > img {
@@ -13,27 +18,31 @@ a > img {
 
 button {
   font-size: 1.5rem;
-  background-color: teal;
-  color: white;
+  width: 10rem;
+  background-color: #EDEDEB;
+  color: #707070;
   border-radius: 5px;
   border: none;
   font-family: poppins;
   padding: 10px;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 h1{
   font-family: poppins;
   font-weight: 600;
   text-align: center;
   font-size: 3rem;
+  margin: 0px;
 }
 header{
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 
 }
 .gallery{
-  margin-top: 25px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; 
@@ -41,4 +50,26 @@ header{
 
 img{
   border-radius: 10px;
+}
+#hero {
+  height: 100vh;
+  background-image: url("../Images/droid-Hero@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}
+p{
+  font-family: poppins;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  margin: 0px;
+}
+h1 {
+  color: white;
 }
