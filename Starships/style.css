@@ -5,7 +5,16 @@
 
 }
 body{
-    background-color: #242424;
+    background-color: white;
+}
+#hero {
+    height: 90vh;
+    background-image: url("../Images/ships-Hero@2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 a{
     text-decoration: none;
@@ -30,12 +39,12 @@ footer {
 .container{
     display: flex;
     margin: 2rem;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .nav {
     border: solid 2px;
     padding-right: 1rem;
-    background-color: white;
+    background-color: #EDEDEB;
     padding: 1rem;
     border-radius: 10px;
 }
@@ -58,7 +67,7 @@ h1{
 
 h2{
     font-family: poppins;
-    color: #ffc72d;
+    color: #707070;
     font-size: 2rem;
     margin-top: .5rem;
     font-weight:600;
@@ -82,3 +91,15 @@ h6{
 img {
     border-radius: 5px;
 }
+p{
+    font-family: poppins;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    margin: 0px;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+  }

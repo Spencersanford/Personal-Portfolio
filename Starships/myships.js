@@ -23,7 +23,7 @@ modalBackground.addEventListener ('click', () => {
 
 
 function populateNav(starships) {
-    starships.forEach(starship => {
+  starships.forEach(starship => {
       let anchorWrap = document.createElement("a");
       anchorWrap.href = "#";
      
