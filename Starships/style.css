@@ -23,7 +23,7 @@ a{
 
 li {
     list-style-type: none;
-    font-family: poppins;
+    font-family: 'poppins';
     font-size: 1.3rem;
 }
 
@@ -92,7 +92,6 @@ h6{
 
 img {
     border-radius: 5px;
-    width: 75%;
 }
 p{
     font-family: 'poppins';
