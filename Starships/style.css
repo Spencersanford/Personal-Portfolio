@@ -60,7 +60,7 @@ footer {
 }
 
 h1{
-    font-family: poppins;
+    font-family: 'poppins';
     color: #ffc72d;
     font-size: 3rem;
     margin-top: 2rem;
@@ -68,7 +68,7 @@ h1{
 }
 
 h2{
-    font-family: poppins;
+    font-family: 'poppins';
     color: #707070;
     font-size: 2rem;
     margin-top: .5rem;
@@ -84,7 +84,7 @@ h2{
 
 h6{
     color: black;
-    font-family: poppins;
+    font-family: 'poppins';
     font-size: 1.5rem;
     padding: .9rem;
     text-align: center;
@@ -95,7 +95,7 @@ img {
     width: 75%;
 }
 p{
-    font-family: poppins;
+    font-family: 'poppins';
     font-weight: 400;
     text-align: center;
     font-size: 1rem;
