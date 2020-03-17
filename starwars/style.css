@@ -16,18 +16,7 @@ a > img {
   margin: 4px;
 }
 
-button {
-  font-size: 1.5rem;
-  width: 10rem;
-  background-color: #EDEDEB;
-  color: #707070;
-  border-radius: 5px;
-  border: none;
-  font-family: poppins;
-  padding: 10px;
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
+
 h1{
   font-family: poppins;
   font-weight: 600;
@@ -72,5 +61,25 @@ p{
   margin: 0px;
 }
 h1 {
+  color: white;
+}
+
+.male, .female, .other, .inactive{
+  background-color: #EDEDEB;
+  color: #707070 ;
+  font-size: 1.5rem;
+  font-family: poppins;
+  border-radius: 4px;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+  border: none;
+
+}
+
+.active{
+  background-color: #7fb16a;
   color: white;
 }

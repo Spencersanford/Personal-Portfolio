@@ -6,6 +6,10 @@ const maleButton = document.querySelector("#maleButton");
 const otherButton = document.querySelector("#otherButton");
 const femaleButton = document.querySelector("#femaleButton");
 
+const maleActive = document.querySelector ('.male')
+const femActive = document.querySelector ('.female')
+const otherActive = document.querySelector ('.other')
+
 const maleCharacters = people.filter(person => person.gender === "male");
 
 const femaleCharacters = people.filter(person => person.gender === "female");
@@ -24,14 +28,41 @@ console.log(otherCharacters.length);
 
 maleButton.addEventListener("click", event => {
   console.log("Clicked on male button");
+  otherActive.classList.remove('active')
+  femActive.classList.remove('active')
+  otherActive.classList.add('inactive')
+  femActive.classList.add('inactive')
+  maleActive.classList.remove ('inactive')
+  maleActive.classList.add('active')
   populateDOM(maleCharacters);
 });
 femaleButton.addEventListener("click", event => {
   console.log("Female Button");
+  //Removing button highlight
+  maleActive.classList.remove('active')
+  otherActive.classList.remove('active')
+  otherActive.classList.remove('active')
+  maleActive.classList.add('inactive')
+  otherActive.classList.add('inactive')
+  femActive.classList.remove('inactive')
+  femActive.classList.add('active')
+//populate
   populateDOM(femaleCharacters);
 });
 otherButton.addEventListener("click", event => {
   console.log("Clicked on male button");
+
+  //remvoing
+  maleActive.classList.remove('active')
+  otherActive.classList.remove('active')
+  femActive.classList.remove('active')
+
+  maleActive.classList.add('inactive')
+  femActive.classList.add('inactive')
+  otherActive.classList.remove('inactive')
+  otherActive.classList.add('active')
+
+
   populateDOM(otherCharacters);
 });
 
