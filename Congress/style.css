@@ -1,6 +1,23 @@
-  
+:root{
+    margin: 0px;
+    padding: 0px;
+}  
+
 .senators {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    margin: 10px;
+    border-radius: 5px;
+}
+.cardName {
+    font-family: poppins;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0px;
 }

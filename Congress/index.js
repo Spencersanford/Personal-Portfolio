@@ -20,16 +20,23 @@ function getSimplifiedSenators(senatorArray) {
 function populateSenatorDiv(simpleSenators) {
     console.log(simpleSenators)
     simpleSenators.forEach(senator => {
-        let senFigure = document.createElement('figure')
-        let figImg = document.createElement('img')
-        let figCaption = document.createElement('figcaption')
+        let senCard = document.createElement('div')
+        senCard.classList.add('card');
+        let cardImg = document.createElement('img')
+        cardImg.classList.add('cardImage');
+        let cardName = document.createElement('h2')
+            cardName.classList.add('cardName');
+        let cardParty = document.createElement ('p')
             
-        figImg.src = senator.imgURL
-        figCaption.textContent = senator.name
+        cardImg.src = senator.imgURL
+        cardName.textContent = senator.name
+        cardParty.textContent = senator.party
 
-        senFigure.appendChild(figImg)
-        senFigure.appendChild(figCaption)
-        senatorDiv.appendChild(senFigure)
+
+        senCard.appendChild(cardImg)
+        senCard.appendChild(cardName)
+        senCard.appendChild(cardParty)
+        senatorDiv.appendChild(senCard)
     })
 }
 
