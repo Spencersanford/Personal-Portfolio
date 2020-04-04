@@ -27,7 +27,7 @@ function populateSenatorDiv(simpleSenators) {
         let cardName = document.createElement('h2')
             cardName.classList.add('cardName');
         let cardParty = document.createElement ('p')
-            
+            cardParty.classList.add('cardParty');
         cardImg.src = senator.imgURL
         cardName.textContent = senator.name
         cardParty.textContent = senator.party
