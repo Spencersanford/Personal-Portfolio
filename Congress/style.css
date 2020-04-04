@@ -3,6 +3,18 @@
     padding: 0px;
 }  
 
+body {
+    background-color: white;
+}
+
+h1{
+    font-family: poppins;
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
 .senators {
     display: flex;
     flex-wrap: wrap;
@@ -11,23 +23,38 @@
 .card{
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: #e03a3e;
     width: 200px;
     margin: 10px;
     border-radius: 5px;
+    padding: 1rem;
 }
 .cardName {
     font-family: poppins;
+    color: white;
     font-size: 1.2rem;
     font-weight: 400;
-    margin-left: 1rem;
-    overflow-wrap: break-word;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow-wrap: break-word; 
 }
 .cardParty {
     font-family: poppins;
+    color: white;
     font-size: 1.2rem;
     font-weight: 400;
-    margin-left: 1rem;
+    margin-left: 0px;
     margin-bottom: 0px;
+    margin-top: 0px;
     overflow-wrap: break-word; 
+}
+.cardImage {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+p{
+    margin: 0px;
 }
