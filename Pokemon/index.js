@@ -1,5 +1,4 @@
-const allPokemon = []
-
+/* const allPokemon = []
 function getPokeData(url) {
   fetch(url).then(function (response) {
     response.json().then(function (pokeData) {
@@ -14,18 +13,33 @@ function getPokeData(url) {
       })
     })
   })
+} */
+
+// Reusable async function to fetch data from the provided url
+async function getAPIData(url) {
+  try {
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error(error)
+  }
 }
+
+// now, use the async getAPIData function
+getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then((data) => {
+  for (const pokemon of data.results) {
+    getAPIData(pokemon.url).then((pokeData) => {
+      populatePokeCard(pokeData)
+    })
+  }
+})
 
 let pokemonGrid = document.querySelector('.pokemonGrid')
 
-getPokeData('https://pokeapi.co/api/v2/pokemon?&limit=25')
+//getPokeData('https://pokeapi.co/api/v2/pokemon?&limit=25')
 
-console.log(allPokemon)
-
-populatePokeCards(allPokemon)
-
-function populatePokeCards(pokeArray) {
-  pokeArray.forEach((pokemon) => {
+function populatePokeCard(singlePokemon) {
     let pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
@@ -35,7 +49,7 @@ function populatePokeCards(pokeArray) {
     )
     let pokeFront = document.createElement('div')
     pokeFront.className = 'card__face card__face--front'
-    pokeFront.textContent = pokemon.name
+    pokeFront.textContent = singlePokemon.name
     let pokeBack = document.createElement('div')
     pokeBack.className = 'card__face card__face--back'
     pokeBack.textContent = 'back'
@@ -44,19 +58,5 @@ function populatePokeCards(pokeArray) {
     pokeCard.appendChild(pokeBack)
     pokeScene.appendChild(pokeCard)
     pokemonGrid.appendChild(pokeScene)
-  })
 }
 
-/* var card = document.querySelector('.card')
-card.addEventListener('click', function () {
-  card.classList.toggle('is-flipped')
-}) */
-
-{
-  /*   <div class="scene">
-    <div class="card">
-      <div class="card__face card__face--front">front</div>
-      <div class="card__face card__face--back">back</div>
-    </div>
-  </div> */
-}
