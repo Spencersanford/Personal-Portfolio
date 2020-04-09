@@ -47,16 +47,17 @@ function populatePokeCard(singlePokemon) {
     pokeCard.addEventListener('click', () =>
       pokeCard.classList.toggle('is-flipped'),
     )
-    let pokeFront = document.createElement('div')
-    pokeFront.className = 'card__face card__face--front'
-    pokeFront.textContent = singlePokemon.name
-    let pokeBack = document.createElement('div')
-    pokeBack.className = 'card__face card__face--back'
-    pokeBack.textContent = 'back'
+
 
     pokeCard.appendChild(pokeFront)
     pokeCard.appendChild(pokeBack)
     pokeScene.appendChild(pokeCard)
     pokemonGrid.appendChild(pokeScene)
+}
+
+function populateCardFront(pokemon) {
+  let CardFront = document.createElement('div')
+    CardFront.className = 'card__face card__face--front'
+    CardFront.textContent = singlePokemon.name
 }
 
