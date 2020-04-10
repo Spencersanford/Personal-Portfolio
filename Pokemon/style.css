@@ -19,6 +19,7 @@
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  
 }
 
 .card.is-flipped {
@@ -33,6 +34,9 @@
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card__face--front {
@@ -42,4 +46,8 @@
 .card__face--back {
   background: blue;
   transform: rotateY(180deg);
+}
+
+.pokeimg{
+  width: 100px;
 }

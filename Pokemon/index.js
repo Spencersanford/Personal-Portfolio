@@ -42,6 +42,7 @@ function populateCardFront(pokemon) {
   cardFront.className = 'card__face card__face--front'
   cardFront.textContent = pokemon.name
   let frontImage = document.createElement('img')
+  frontImage.className = 'pokeimg'
   frontImage.src = `../images/${pokemon.id}.png`
   cardFront.appendChild(frontImage)
   return cardFront
