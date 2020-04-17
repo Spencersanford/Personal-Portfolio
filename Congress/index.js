@@ -28,11 +28,17 @@ function populateSenatorDiv(simpleSenators) {
             cardName.classList.add('cardName');
         let cardParty = document.createElement ('p')
             cardParty.classList.add('cardParty');
+            let partyIcon = document.createElement('i')
+            if (senator.party === 'R') partyIcon.className = 'fas fa-republican'
+            if (senator.party === 'D') partyIcon.className = 'fas fa-democrat'
+            if (senator.party === 'ID') partyIcon.className = 'fas fa-star'
+            
         cardImg.src = senator.imgURL
         cardName.textContent = senator.name
         cardParty.textContent = senator.party
 
 
+        cardParty.appendChild(partyIcon)
         senCard.appendChild(cardImg)
         senCard.appendChild(cardName)
         senCard.appendChild(cardParty)

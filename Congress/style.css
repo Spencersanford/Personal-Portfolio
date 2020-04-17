@@ -23,15 +23,17 @@ h1{
 .card{
     display: flex;
     flex-direction: column;
-    background-color: #e03a3e;
+    background-color:white;
     width: 200px;
     margin: 10px;
     border-radius: 5px;
     padding: 1rem;
+    box-shadow: 0px 3px 6px #00000029;
+
 }
 .cardName {
     font-family: poppins;
-    color: white;
+    color: black;
     font-size: 1.2rem;
     font-weight: 400;
     margin-left: 0px;
@@ -48,6 +50,8 @@ h1{
     margin-bottom: 0px;
     margin-top: 0px;
     overflow-wrap: break-word; 
+    display: flex;
+    justify-content: flex-end;
 }
 .cardImage {
     border-radius: 10px;
@@ -57,4 +61,16 @@ h1{
 
 p{
     margin: 0px;
+}
+
+.fa-democrat {
+    color: #1d87c7;
+}
+
+.fa-republican {
+    color: #e03a3e;
+}
+
+.fa-star {
+    color: #f8c940;
 }
