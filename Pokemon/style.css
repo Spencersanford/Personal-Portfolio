@@ -44,7 +44,7 @@ header {
 }
 
 .card__face--front {
-  background: red;
+  background:  #e03a3e;
 }
 
 .card__face--back {
