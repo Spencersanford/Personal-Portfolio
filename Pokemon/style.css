@@ -16,7 +16,7 @@ header {
   border: 1px solid #CCC;
   margin: 10px;
   perspective: 600px;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .card {
@@ -40,7 +40,7 @@ header {
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .card__face--front {
@@ -51,7 +51,18 @@ header {
   background: blue;
   transform: rotateY(180deg);
 }
+.frontImg{
+  width: 150px;
+  margin-top: 20px;
+}
+.pokeP{
+  font-size: 25px;
+  font-family: poppins;
+  font-weight: 400;
+}
 
 li {
   text-align: left;
+  font-family: poppins;
+  font-weight: 400;
 }
