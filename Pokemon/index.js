@@ -70,18 +70,22 @@ function getImageFileName(pokemon) {
   } else if (pokemon.id > 9 && pokemon.id < 100) {
     return `0${pokemon.id}`
   } else if (pokemon.id > 809) {
-    return `pokeball`
+    return `shrek`
   }
 }
 
 function populateCardBack(pokemon) {
   let cardBack = document.createElement('div')
   cardBack.className = 'card__face card__face--back'
+  let abilityTitle = document.createElement('p')
+  abilityTitle.className = 'backP'
+  abilityTitle.textContent = "Abilities"
   let abilityList = document.createElement('ul')
   pokemon.abilities.forEach(ability => {
     let abilityName = document.createElement('li')
     abilityName.textContent = ability.ability.name
     abilityList.appendChild(abilityName)
+    cardBack.appendChild(abilityTitle)
   })
   cardBack.appendChild(abilityList)
   return cardBack
@@ -98,21 +102,21 @@ class Pokemon {
 }
 
 function addPokemon() {
-  let Thoremon = new Pokemon(190, 290, 'thoremon',
+  let Thoremon = new Pokemon(190, 290, 'Shrek',
     [
       {
         ability: {
-        name: 'Thunder Belly'
+        name: 'Blessing'
         }
       },
       {
         ability: {
-        name: 'Beard Power'
+        name: 'All Star'
         }
       },
       {
         ability: {
-        name: 'Rancid Stench'
+        name: 'Onion'
         }
       }
   ])
