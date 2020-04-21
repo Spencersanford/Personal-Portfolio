@@ -15,6 +15,7 @@ function loadPage() {
     for (const pokemon of data.results) {
       getAPIData(pokemon.url).then((pokeData) => {
         populatePokeCard(pokeData)
+        console.log(pokeData)
       })
     }
   })
@@ -77,16 +78,39 @@ function getImageFileName(pokemon) {
 function populateCardBack(pokemon) {
   let cardBack = document.createElement('div')
   cardBack.className = 'card__face card__face--back'
-  let abilityTitle = document.createElement('p')
-  abilityTitle.className = 'backP'
-  abilityTitle.textContent = "Abilities"
-  let abilityList = document.createElement('ul')
+  let infoTitle = document.createElement('p')
+  infoTitle.className = 'basicP'
+  infoTitle.textContent = "Basic Info"
+  
+  let height = document.createElement("p");
+  height.className ="infoP"
+  height.textContent = "Height" + ":" + "   "  + `${pokemon.height}`;
+
+  let weight = document.createElement("p");
+  weight.className ="infoP"
+  weight.textContent = "Weight" + ":" + "   " + `${pokemon.weight}`;
+
+  let startingLevel = document.createElement("p");
+  startingLevel.className = "infoP"
+ startingLevel.textContent = "Starting Level" + ":" + "   "  + + `${pokemon.base_experience}`;
+
+ let abilityTitle = document.createElement('p')
+ abilityTitle.className = 'basicP'
+ abilityTitle.textContent = "Abilites"
+ 
+ let abilityList = document.createElement('ul')
   pokemon.abilities.forEach(ability => {
     let abilityName = document.createElement('li')
     abilityName.textContent = ability.ability.name
     abilityList.appendChild(abilityName)
     cardBack.appendChild(abilityTitle)
   })
+  
+  cardBack.appendChild(infoTitle)
+  cardBack.appendChild(height);
+  cardBack.appendChild(weight);
+  cardBack.appendChild(startingLevel)
+  cardBack.appendChild(abilityTitle)
   cardBack.appendChild(abilityList)
   return cardBack
 }

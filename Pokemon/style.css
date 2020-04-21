@@ -101,10 +101,24 @@ li {
   text-align: left;
   font-family: 'poppins', sans-serif;
   font-weight: 400;
+  margin: 0px;
+}
+ul{
+  margin: 0px;
 }
 
-.backP{
-  font-size: 25px;
+.basicP{
+  font-size: 20px;
   font-family: 'poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+  margin: 0px;
+  margin-top: 10px;
 }
+.infoP{
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  padding-inline-start: 40px;
+}
+
