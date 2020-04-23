@@ -3,10 +3,14 @@ import {  removeChildren} from "/utils.js";
 
 const senatorDiv = document.querySelector('.senators')
 const seniorityButton = document.querySelector('#seniorityButton')
+const nameButton = document.querySelector('#nameButton')
 
 seniorityButton.addEventListener('click', () => {
-    birthdaySort(),
-    console.log(birthdaySort)
+    birthdaySort()
+})
+
+nameButton.addEventListener('click', () => {
+    populateSenatorDiv(getSimplifiedSenators(senators))
 })
 
 function getSimplifiedSenators(senatorArray) {
