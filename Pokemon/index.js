@@ -11,11 +11,10 @@ async function getAPIData(url) {
 
 // now, use the async getAPIData function
 function loadPage() {
-  getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then((data) => {
+  getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then(async (data) => {
     for (const pokemon of data.results) {
-      getAPIData(pokemon.url).then((pokeData) => {
+      await getAPIData(pokemon.url).then((pokeData) => {
         populatePokeCard(pokeData)
-        console.log(pokeData)
       })
     }
   })
