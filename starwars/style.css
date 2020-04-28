@@ -78,8 +78,12 @@ h1 {
   border: none;
 
 }
+.male, .female, .other, .inactive a:hover{
+  cursor: pointer;
+}
 
 .active{
   background-color: #7fb16a;
   color: white;
+  
 }
