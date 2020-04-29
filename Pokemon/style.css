@@ -55,7 +55,7 @@ cursor: pointer;
 .scene {
   width: 200px;
   height: 260px;
-  margin: 10px;
+  margin: 15px;
   perspective: 600px;
   border-radius: 5px;
 }
@@ -67,10 +67,17 @@ cursor: pointer;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  border: 6px #f8c444 solid;
+  border-radius: 10px;
+  box-shadow: aqua 10px;
+
 }
 
 .card.is-flipped {
   transform: rotateY(180deg);
+
+  border: 6px #f8c444 solid;
+  border-radius: 10px;
 }
 
 .card__face {
@@ -81,16 +88,18 @@ cursor: pointer;
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
-  border-radius: 5px;
+ 
 }
 
 .card__face--front {
-  background:  #e03a3e;
+  background-color:  #2a5793;
+  
 }
 
 .card__face--back {
-  background: #f8c444;
+  background-color: #2a5793;;
   transform: rotateY(180deg);
+  
 }
 .frontImg{
   width: 150px;
