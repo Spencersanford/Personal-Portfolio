@@ -93,12 +93,14 @@ cursor: pointer;
 
 .card__face--front {
   background-color:  #2a5793;
+  border-radius: 5px;
   
 }
 
 .card__face--back {
   background-color: #2a5793;;
   transform: rotateY(180deg);
+  border-radius: 5px;
   
 }
 .frontImg{
