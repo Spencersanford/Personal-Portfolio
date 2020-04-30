@@ -57,31 +57,24 @@ button:hover{
     width: 200px;
     margin: 10px;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 1.2rem;
     box-shadow: 0px 3px 6px #00000029;
 
 }
 .cardName {
-    font-family: poppins;
+    font-family: "poppins";
     color: black;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 700;
     margin-left: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
     overflow-wrap: break-word; 
 }
-.cardParty {
-    font-family: poppins;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    overflow-wrap: break-word; 
-    display: flex;
-    justify-content: flex-end;
+.cardInfo{
+    font-family: "poppins";
+    margin-top: 5px;
+    
 }
 .cardImage {
     border-radius: 10px;
@@ -95,14 +88,18 @@ p{
 
 .fa-democrat {
     color: #1d87c7;
+    margin-top: 5px;
+    align-self: flex-end;
 }
 
 .fa-republican {
     color: #e03a3e;
+    align-self: flex-end;
 }
 
 .fa-star {
     color: #f8c940;
+    align-self: flex-end;
 }
 
 

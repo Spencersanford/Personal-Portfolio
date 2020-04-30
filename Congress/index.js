@@ -24,7 +24,9 @@ function getSimplifiedSenators(senatorArray) {
             missedVotesPct: senator.missed_votes_pct,
             party: senator.party,
             loyaltyPct: senator.votes_with_party_pct,
-            date_of_birth: senator.date_of_birth
+            date_of_birth: senator.date_of_birth,
+            state: senator.state,
+            nextElection: senator.next_election
         }
     })
 }
@@ -38,8 +40,11 @@ function populateSenatorDiv(simpleSenators) {
         cardImg.classList.add('cardImage');
         let cardName = document.createElement('h2')
             cardName.classList.add('cardName');
-        let cardParty = document.createElement ('p')
-            cardParty.classList.add('cardParty');
+        let stateFrom = document.createElement('p')
+            stateFrom.classList.add('cardInfo');
+        let election = document.createElement ('p')
+            election.classList.add('cardInfo')
+    
             let partyIcon = document.createElement('i')
             if (senator.party === 'R') partyIcon.className = 'fas fa-republican'
             if (senator.party === 'D') partyIcon.className = 'fas fa-democrat'
@@ -47,14 +52,15 @@ function populateSenatorDiv(simpleSenators) {
             
         cardImg.src = senator.imgURL
         cardName.textContent = senator.name
-        cardParty.textContent = senator.party
+        stateFrom.textContent = "From:" +" " + senator.state
+        election.textContent = "In office until:" + " "+  senator.nextElection
 
-
-        cardParty.appendChild(partyIcon)
         senCard.appendChild(cardImg)
         senCard.appendChild(cardName)
-        senCard.appendChild(cardParty)
+        senCard.appendChild(stateFrom)
+        senCard.appendChild(election)
         senatorDiv.appendChild(senCard)
+        senCard.appendChild(partyIcon)
     })
 }
 
